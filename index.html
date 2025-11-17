@@ -10,15 +10,15 @@
   <meta property="og:description" content="Join us on 11 January 2026 in Hồ Chí Minh City. View schedule, gallery, RSVP, and travel tips." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://thienan-truc-wedding.com" />
-  <meta property="og:image" content="images/gallery-1.jpg" />
+  <meta property="og:image" content="./images/gallery-1.jpg" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Thiên Ân &amp; Huỳnh Trúc Wedding" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Thiên Ân &amp; Huỳnh Trúc – Wedding Invitation" />
   <meta name="twitter:description" content="We are getting married! Discover our story, events, gallery, RSVP, and travel details." />
-  <meta name="twitter:image" content="images/gallery-1.jpg" />
+  <meta name="twitter:image" content="./images/gallery-1.jpg" />
   <link rel="canonical" href="https://thienan-truc-wedding.com" />
-  <link rel="icon" type="image/jpeg" href="images/gallery-1.jpg" />
+  <link rel="icon" type="image/jpeg" href="./images/gallery-1.jpg" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -69,7 +69,7 @@
     <section class="hero" id="top">
       <picture>
         <!-- Replace with your responsive images -->
-        <img src="images/couple-hero.jpg" alt="Photo of the couple" class="hero__image" />
+        <img src="./images/couple-hero.jpg" alt="Photo of the couple" class="hero__image" />
       </picture>
 
       <div class="hero__overlay"></div>
@@ -80,7 +80,7 @@
         <p class="hero__meta">
           <span class="hero__date">11 • 01 • 2026</span>
           <span class="hero__divider">•</span>
-          <span class="hero__location">Hồ Chí Minh City</span>
+          <span class="hero__location" data-i18n="hero.location">Hồ Chí Minh City</span>
         </p>
         <a href="#rsvp" class="hero__cta hero__cta--primary" data-i18n="hero.cta">Confirm Your Attendance</a>
 
@@ -130,7 +130,7 @@
       <!-- Background music -->
       <audio id="bgMusic" preload="none" loop>
         <!-- Replace with your audio file -->
-        <source src="audio/wedding-song.mp3" type="audio/mpeg" />
+        <source src="./audio/wedding-song.mp3" type="audio/mpeg" />
       </audio>
     </section>
 
@@ -145,19 +145,19 @@
           <div class="col-md-6">
             <article class="profile-card profile-card--groom h-100">
               <div class="profile-card__media">
-                <img src="images/groom-family.jpg" alt="Portrait of Thiên Ân" class="img-fluid profile-card__image" />
+                <img src="./images/groom-family.jpg" alt="Portrait of Thiên Ân" class="img-fluid profile-card__image" />
               </div>
               <div class="profile-card__body">
-                <p class="profile-card__eyebrow">The Groom</p>
-                <h3 class="profile-card__name">Nguyễn Thiên Ân</h3>
-                <p class="profile-card__text">
+                <p class="profile-card__eyebrow" data-i18n="couple.groom.eyebrow">The Groom</p>
+                <h3 class="profile-card__name" data-i18n="couple.groom.name">Nguyễn Thiên Ân</h3>
+                <p class="profile-card__text" data-i18n="couple.groom.text">
                   A patient listener, designer by day, and amateur guitarist by night. Thiên Ân believes in
                   slow mornings, handwritten letters, and love that grows quietly and steadily.
                 </p>
                 <ul class="profile-card__facts">
-                  <li>Architect &amp; coffee devotee</li>
-                  <li>Most likely to whistle our favorite song</li>
-                  <li>Vows to keep every promise he makes</li>
+                  <li data-i18n="couple.groom.fact1">Architect &amp; coffee devotee</li>
+                  <li data-i18n="couple.groom.fact2">Most likely to whistle our favorite song</li>
+                  <li data-i18n="couple.groom.fact3">Vows to keep every promise he makes</li>
                 </ul>
               </div>
             </article>
@@ -165,19 +165,19 @@
           <div class="col-md-6">
             <article class="profile-card profile-card--bride h-100">
               <div class="profile-card__media">
-                <img src="images/bride-family.jpg" alt="Portrait of Huỳnh Trúc" class="img-fluid profile-card__image" />
+                <img src="./images/bride-family.jpg" alt="Portrait of Huỳnh Trúc" class="img-fluid profile-card__image" />
               </div>
               <div class="profile-card__body">
-                <p class="profile-card__eyebrow">The Bride</p>
-                <h3 class="profile-card__name">Huỳnh Trúc</h3>
-                <p class="profile-card__text">
+                <p class="profile-card__eyebrow" data-i18n="couple.bride.eyebrow">The Bride</p>
+                <h3 class="profile-card__name" data-i18n="couple.bride.name">Huỳnh Trúc</h3>
+                <p class="profile-card__text" data-i18n="couple.bride.text">
                   A joyful storyteller, educator, and floral enthusiast. Trúc lights up every room with her laugh and
                   keeps everyone calm with a warm embrace.
                 </p>
                 <ul class="profile-card__facts">
-                  <li>Lover of poetry &amp; playlists</li>
-                  <li>Will never say no to a sunset walk</li>
-                  <li>Cannot wait to dance with you</li>
+                  <li data-i18n="couple.bride.fact1">Lover of poetry &amp; playlists</li>
+                  <li data-i18n="couple.bride.fact2">Will never say no to a sunset walk</li>
+                  <li data-i18n="couple.bride.fact3">Cannot wait to dance with you</li>
                 </ul>
               </div>
             </article>
@@ -258,16 +258,16 @@
             <div class="family-card">
               <h3 class="family-card__title" data-i18n="family.groom.title">Groom's Family</h3>
               <div class="family-card__content">
-                <img src="images/groom-family.jpg" alt="Groom's family photo" class="img-fluid mb-3 rounded" />
-                <p class="family-card__eyebrow">Parents of the groom</p>
-                <p class="family-member"><strong>Mr. Hưng &amp; Mrs. Chi</strong></p>
-                <p class="family-card__text">
+                <img src="./images/groom-family.jpg" alt="Groom's family photo" class="img-fluid mb-3 rounded" />
+                <p class="family-card__eyebrow" data-i18n="family.groom.label">Parents of the groom</p>
+                <p class="family-member"><strong data-i18n="family.groom.parents">Mr. Hưng &amp; Mrs. Chi</strong></p>
+                <p class="family-card__text" data-i18n="family.groom.text">
                   Hosts of the morning tea ceremony and keepers of treasured family traditions. They look forward to welcoming each guest personally.
                 </p>
                 <ul class="family-card__list">
-                  <li>Ceremony home: 123 Đường Hoa Hồng</li>
-                  <li>Contact: +84 90 234 5678</li>
-                  <li>Requests: Kindly arrive by 07:45</li>
+                  <li data-i18n="family.groom.list.0">Ceremony home: 123 Đường Hoa Hồng</li>
+                  <li data-i18n="family.groom.list.1">Contact: +84 90 234 5678</li>
+                  <li data-i18n="family.groom.list.2">Requests: Kindly arrive by 07:45</li>
                 </ul>
             </div>
             </div>
@@ -276,16 +276,16 @@
             <div class="family-card">
               <h3 class="family-card__title" data-i18n="family.bride.title">Bride's Family</h3>
               <div class="family-card__content">
-                <img src="images/bride-family.jpg" alt="Bride's family photo" class="img-fluid mb-3 rounded" />
-                <p class="family-card__eyebrow">Parents of the bride</p>
-                <p class="family-member"><strong>Mr. Nhanh &amp; Mrs. Nga</strong></p>
-                <p class="family-card__text">
+                <img src="./images/bride-family.jpg" alt="Bride's family photo" class="img-fluid mb-3 rounded" />
+                <p class="family-card__eyebrow" data-i18n="family.bride.label">Parents of the bride</p>
+                <p class="family-member"><strong data-i18n="family.bride.parents">Mr. Nhanh &amp; Mrs. Nga</strong></p>
+                <p class="family-card__text" data-i18n="family.bride.text">
                   Warm hosts of the reception who curated the floral palette and menu pairings to make the afternoon unforgettable.
                 </p>
                 <ul class="family-card__list">
-                  <li>Reception lead: The Rose Garden Hall</li>
-                  <li>Contact: +84 93 111 2468</li>
-                  <li>Requests: Share dietary notes in RSVP</li>
+                  <li data-i18n="family.bride.list.0">Reception lead: The Rose Garden Hall</li>
+                  <li data-i18n="family.bride.list.1">Contact: +84 93 111 2468</li>
+                  <li data-i18n="family.bride.list.2">Requests: Share dietary notes in RSVP</li>
                 </ul>             
             </div>
             </div>
@@ -295,7 +295,7 @@
           <div class="col-12">
             <div class="family-union-wrapper">
               <div class="family-union-card mx-auto">
-                  <img src="images/family-union.jpg" alt="Our united families" class="family-union-image" />
+                  <img src="./images/family-union.jpg" alt="Our united families" class="family-union-image" />
                   <h4 class="mb-2" data-i18n="family.union.title">Two Families, One Celebration</h4>
                   <p class="mb-0" data-i18n="family.union.text">We joyfully unite our families and invite you to celebrate this union with us.</p>
               </div>
@@ -327,21 +327,21 @@
             <div class="event-card__icon">🎎</div>
             <h3 class="event-card__title" data-i18n="events.ceremony.title">Lễ Vu Quy (Bride's Ceremony)</h3>
             <div class="event-card__badges">
-              <span class="event-badge event-badge--outline">Family only</span>
+              <span class="event-badge event-badge--outline" data-i18n="events.ceremony.badge.scope">Family only</span>
               <span class="event-badge event-badge--solid">08:00 AM</span>
             </div>
             <ul class="event-card__details">
               <li>
-                <strong>Date</strong>
+                <strong data-i18n="events.labels.date">Date</strong>
                 <span>11 January 2026</span>
               </li>
               <li>
-                <strong>Venue</strong>
+                <strong data-i18n="events.labels.venue">Venue</strong>
                 <span data-i18n="events.ceremony.location">123 Đường Hoa Hồng, Quận 1, TP. Hồ Chí Minh</span>
               </li>
               <li>
-                <strong>Dress</strong>
-                <span>Traditional tones / pastels</span>
+                <strong data-i18n="events.labels.dress">Dress</strong>
+                <span data-i18n="events.ceremony.dress">Traditional tones / pastels</span>
               </li>
             </ul>
             <p class="event-card__description" data-i18n="events.ceremony.description">
@@ -353,21 +353,21 @@
             <div class="event-card__icon">💍</div>
             <h3 class="event-card__title" data-i18n="events.reception.title">Wedding Ceremony &amp; Reception</h3>
             <div class="event-card__badges">
-              <span class="event-badge event-badge--outline">All guests</span>
+              <span class="event-badge event-badge--outline" data-i18n="events.reception.badge.scope">All guests</span>
               <span class="event-badge event-badge--solid">11:30 AM</span>
             </div>
             <ul class="event-card__details">
               <li>
-                <strong>Date</strong>
+                <strong data-i18n="events.labels.date">Date</strong>
                 <span>11 January 2026</span>
               </li>
               <li>
-                <strong>Venue</strong>
+                <strong data-i18n="events.labels.venue">Venue</strong>
                 <span data-i18n="events.reception.location">The Rose Garden Hall, 456 Đường Ánh Trăng, TP. Hồ Chí Minh</span>
               </li>
               <li>
-                <strong>Program</strong>
-                <span>Welcome drinks · Ceremony · Feast · First dance</span>
+                <strong data-i18n="events.labels.program">Program</strong>
+                <span data-i18n="events.reception.program">Welcome drinks · Ceremony · Feast · First dance</span>
               </li>
             </ul>
             <p class="event-card__description" data-i18n="events.reception.description">
@@ -469,25 +469,25 @@
 
               <div class="carousel-inner rounded-3 overflow-hidden">
                 <div class="carousel-item active">
-                  <img src="images/gallery-1.jpg" class="d-block w-100" alt="Gallery image 1" data-caption-key="gallery.caption.0" />
+                  <img src="./images/gallery-1.jpg" class="d-block w-100" alt="Gallery image 1" data-caption-key="gallery.caption.0" />
                   <div class="carousel-caption text-center">
                     <p data-i18n="gallery.caption.0">A sweet moment together</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="images/gallery-2.jpg" class="d-block w-100" alt="Gallery image 2" data-caption-key="gallery.caption.1" />
+                  <img src="./images/gallery-2.jpg" class="d-block w-100" alt="Gallery image 2" data-caption-key="gallery.caption.1" />
                   <div class="carousel-caption text-center">
                     <p data-i18n="gallery.caption.1">Walking by the river</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="images/gallery-3.jpg" class="d-block w-100" alt="Gallery image 3" data-caption-key="gallery.caption.2" />
+                  <img src="./images/gallery-3.jpg" class="d-block w-100" alt="Gallery image 3" data-caption-key="gallery.caption.2" />
                   <div class="carousel-caption text-center">
                     <p data-i18n="gallery.caption.2">Laughs and lights</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="images/gallery-4.jpg" class="d-block w-100" alt="Gallery image 4" data-caption-key="gallery.caption.3" />
+                  <img src="./images/gallery-4.jpg" class="d-block w-100" alt="Gallery image 4" data-caption-key="gallery.caption.3" />
                   <div class="carousel-caption text-center">
                     <p data-i18n="gallery.caption.3">Our favorite place</p>
                   </div>
@@ -507,16 +507,16 @@
             <!-- Thumbnails that control the carousel -->
             <div class="mt-3 carousel-thumbs d-flex gap-2 justify-content-center">
               <button class="thumb-btn" data-bs-target="#albumCarousel" data-bs-slide-to="0" aria-label="Show slide 1">
-                <img src="images/gallery-1-thumb.jpg" alt="Thumbnail 1" />
+                <img src="./images/gallery-1-thumb.jpg" alt="Thumbnail 1" />
               </button>
               <button class="thumb-btn" data-bs-target="#albumCarousel" data-bs-slide-to="1" aria-label="Show slide 2">
-                <img src="images/gallery-2-thumb.jpg" alt="Thumbnail 2" />
+                <img src="./images/gallery-2-thumb.jpg" alt="Thumbnail 2" />
               </button>
               <button class="thumb-btn" data-bs-target="#albumCarousel" data-bs-slide-to="2" aria-label="Show slide 3">
-                <img src="images/gallery-3-thumb.jpg" alt="Thumbnail 3" />
+                <img src="./images/gallery-3-thumb.jpg" alt="Thumbnail 3" />
               </button>
               <button class="thumb-btn" data-bs-target="#albumCarousel" data-bs-slide-to="3" aria-label="Show slide 4">
-                <img src="images/gallery-4-thumb.jpg" alt="Thumbnail 4" />
+                <img src="./images/gallery-4-thumb.jpg" alt="Thumbnail 4" />
               </button>
             </div>
           </div>
