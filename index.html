@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thiên Ân &amp; Huỳnh Trúc – Wedding Invitation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Celebrate the wedding of Thiên Ân &amp; Huỳnh Trúc in Hồ Chí Minh City on 11 January 2026. View event details, RSVP, gallery, gifts, and travel info." />
+  <meta name="theme-color" content="#c9a27c" />
+  <meta property="og:title" content="Thiên Ân &amp; Huỳnh Trúc – Wedding Invitation" />
+  <meta property="og:description" content="Join us on 11 January 2026 in Hồ Chí Minh City. View schedule, gallery, RSVP, and travel tips." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thienan-truc-wedding.com" />
+  <meta property="og:image" content="images/gallery-1.jpg" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Thiên Ân &amp; Huỳnh Trúc Wedding" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Thiên Ân &amp; Huỳnh Trúc – Wedding Invitation" />
+  <meta name="twitter:description" content="We are getting married! Discover our story, events, gallery, RSVP, and travel details." />
+  <meta name="twitter:image" content="images/gallery-1.jpg" />
+  <link rel="canonical" href="https://thienan-truc-wedding.com" />
+  <link rel="icon" type="image/jpeg" href="images/gallery-1.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Floating petals -->
+  <div class="petals" aria-hidden="true"></div>
+
+  <!-- Top navigation / header -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <div class="site-header__title">
+        <span class="site-header__label">Wedding of</span>
+        <h1 class="site-header__names">Thiên Ân &amp; Huỳnh Trúc</h1>
+      </div>
+      <div class="lang-switch" aria-label="Language switcher">
+        <button id="langEn" class="lang-btn" aria-pressed="false">EN</button>
+        <button id="langVi" class="lang-btn" aria-pressed="false">VI</button>
+      </div>
+      <nav class="site-header__nav">
+        <a href="#story" data-i18n="nav.story">Story</a>
+        <a href="#events" data-i18n="nav.events">Events</a>
+        <a href="#schedule" data-i18n="nav.schedule">Schedule</a>
+        <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+        <a href="#rsvp" data-i18n="nav.rsvp">Celebration</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <button class="site-header__menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="top">
+      <picture>
+        <!-- Replace with your responsive images -->
+        <img src="images/couple-hero.jpg" alt="Photo of the couple" class="hero__image" />
+      </picture>
+
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow" data-i18n="hero.eyebrow">We are getting married</p>
+        <h2 class="hero__names">Thiên Ân &amp; Huỳnh Trúc</h2>
+        <p class="hero__meta">
+          <span class="hero__date">11 • 01 • 2026</span>
+          <span class="hero__divider">•</span>
+          <span class="hero__location">Hồ Chí Minh City</span>
+        </p>
+        <a href="#rsvp" class="hero__cta hero__cta--primary" data-i18n="hero.cta">Confirm Your Attendance</a>
+
+        <div class="hero__countdown" aria-label="Countdown to wedding">
+          <div class="hero__countdown-item">
+            <span id="days" class="hero__countdown-number">--</span>
+            <span class="hero__countdown-label" data-i18n="count.days">Days</span>
+          </div>
+          <div class="hero__countdown-item">
+            <span id="hours" class="hero__countdown-number">--</span>
+            <span class="hero__countdown-label" data-i18n="count.hours">Hours</span>
+          </div>
+          <div class="hero__countdown-item">
+            <span id="minutes" class="hero__countdown-number">--</span>
+            <span class="hero__countdown-label" data-i18n="count.minutes">Minutes</span>
+          </div>
+          <div class="hero__countdown-item" aria-hidden="false">
+            <span id="seconds" class="hero__countdown-number">--</span>
+            <span class="hero__countdown-label" data-i18n="count.seconds">Seconds</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Music button -->
+      <button
+        id="musicToggle"
+        class="music-btn"
+        type="button"
+        aria-label="Toggle background music"
+      >
+        <span class="music-btn__label" data-i18n="music.play">Music</span>
+        <span class="music-btn__icon">🎵</span>
+      </button>
+
+      <!-- Share button -->
+      <button
+        id="shareBtn"
+        class="share-btn"
+        type="button"
+        aria-label="Share this invitation"
+        title="Share this invitation"
+      >
+        <span class="share-btn__icon">🔗</span>
+        <span class="share-btn__label" data-i18n="share.label">Share</span>
+      </button>
+
+      <!-- Background music -->
+      <audio id="bgMusic" preload="none" loop>
+        <!-- Replace with your audio file -->
+        <source src="audio/wedding-song.mp3" type="audio/mpeg" />
+      </audio>
+    </section>
+
+    <!-- Couple Section -->
+    <section id="couple" class="section section--muted couple-section" data-animate>
+      <div class="container">
+        <div class="section__heading">
+          <p class="section__eyebrow">Meet Us</p>
+          <h2 class="section__title">Two hearts, one promise</h2>
+        </div>
+        <div class="row g-4 couple-profiles">
+          <div class="col-md-6">
+            <article class="profile-card profile-card--groom h-100">
+              <div class="profile-card__media">
+                <img src="images/groom-family.jpg" alt="Portrait of Thiên Ân" class="img-fluid profile-card__image" />
+              </div>
+              <div class="profile-card__body">
+                <p class="profile-card__eyebrow">The Groom</p>
+                <h3 class="profile-card__name">Nguyễn Thiên Ân</h3>
+                <p class="profile-card__text">
+                  A patient listener, designer by day, and amateur guitarist by night. Thiên Ân believes in
+                  slow mornings, handwritten letters, and love that grows quietly and steadily.
+                </p>
+                <ul class="profile-card__facts">
+                  <li>Architect &amp; coffee devotee</li>
+                  <li>Most likely to whistle our favorite song</li>
+                  <li>Vows to keep every promise he makes</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6">
+            <article class="profile-card profile-card--bride h-100">
+              <div class="profile-card__media">
+                <img src="images/bride-family.jpg" alt="Portrait of Huỳnh Trúc" class="img-fluid profile-card__image" />
+              </div>
+              <div class="profile-card__body">
+                <p class="profile-card__eyebrow">The Bride</p>
+                <h3 class="profile-card__name">Huỳnh Trúc</h3>
+                <p class="profile-card__text">
+                  A joyful storyteller, educator, and floral enthusiast. Trúc lights up every room with her laugh and
+                  keeps everyone calm with a warm embrace.
+                </p>
+                <ul class="profile-card__facts">
+                  <li>Lover of poetry &amp; playlists</li>
+                  <li>Will never say no to a sunset walk</li>
+                  <li>Cannot wait to dance with you</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="section section--light" data-animate>
+      <div class="container">
+        <div class="section__heading">
+          <p class="section__eyebrow" data-i18n="story.eyebrow">Our Story</p>
+          <h2 class="section__title" data-i18n="story.title">How it all began</h2>
+        </div>
+        <div class="story-grid row g-4 align-items-start">
+          <div class="col-lg-5">
+            <div class="story">
+              <p>
+                It started with a simple message and a shared cup of coffee. From strangers to best
+                friends, from best friends to soulmates – every step brought us closer together.
+              </p>
+              <p>
+                On a quiet evening, surrounded by warm lights and laughter, he asked and she said
+                "yes". Now we can't wait to celebrate this next chapter with the people we love most –
+                including you.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <ol class="story-timeline">
+              <li class="story-timeline__item">
+                <div class="story-timeline__date">May 2018</div>
+                <h3 class="story-timeline__title">The first hello</h3>
+                <p class="story-timeline__text">
+                  Two mutual friends arranged a casual coffee meet-up. We stayed for three hours talking about
+                  travel, design, and secretly, each other.
+                </p>
+              </li>
+              <li class="story-timeline__item">
+                <div class="story-timeline__date">August 2019</div>
+                <h3 class="story-timeline__title">From friends to partners</h3>
+                <p class="story-timeline__text">
+                  A spontaneous road trip to Đà Lạt made us realize we were happiest when singing off-key together.
+                  That was the day we officially began dating.
+                </p>
+              </li>
+              <li class="story-timeline__item">
+                <div class="story-timeline__date">December 2022</div>
+                <h3 class="story-timeline__title">The promise</h3>
+                <p class="story-timeline__text">
+                  Under sparkling lanterns, Thiên Ân asked Trúc to spend forever with him. With joyful tears, she said yes.
+                </p>
+              </li>
+              <li class="story-timeline__item">
+                <div class="story-timeline__date">January 2026</div>
+                <h3 class="story-timeline__title">Happily ever after</h3>
+                <p class="story-timeline__text">
+                  Surrounded by family and friends, we will begin our married life—and we are so grateful that you will be part of it.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Family Section -->
+    <section id="family" class="section section--muted family-section" data-animate>
+      <div class="container">
+        <div class="section__heading">
+          <p class="section__eyebrow" data-i18n="family.eyebrow">Meet the Families</p>
+          <h2 class="section__title" data-i18n="family.title">A union of hearts</h2>
+        </div>
+        
+        <div class="row family-cards">
+          <div class="col-md-6 mb-4 text-md-end">
+            <div class="family-card">
+              <h3 class="family-card__title" data-i18n="family.groom.title">Groom's Family</h3>
+              <div class="family-card__content">
+                <img src="images/groom-family.jpg" alt="Groom's family photo" class="img-fluid mb-3 rounded" />
+                <p class="family-card__eyebrow">Parents of the groom</p>
+                <p class="family-member"><strong>Mr. Hưng &amp; Mrs. Chi</strong></p>
+                <p class="family-card__text">
+                  Hosts of the morning tea ceremony and keepers of treasured family traditions. They look forward to welcoming each guest personally.
+                </p>
+                <ul class="family-card__list">
+                  <li>Ceremony home: 123 Đường Hoa Hồng</li>
+                  <li>Contact: +84 90 234 5678</li>
+                  <li>Requests: Kindly arrive by 07:45</li>
+                </ul>
+            </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4 text-md-start">
+            <div class="family-card">
+              <h3 class="family-card__title" data-i18n="family.bride.title">Bride's Family</h3>
+              <div class="family-card__content">
+                <img src="images/bride-family.jpg" alt="Bride's family photo" class="img-fluid mb-3 rounded" />
+                <p class="family-card__eyebrow">Parents of the bride</p>
+                <p class="family-member"><strong>Mr. Nhanh &amp; Mrs. Nga</strong></p>
+                <p class="family-card__text">
+                  Warm hosts of the reception who curated the floral palette and menu pairings to make the afternoon unforgettable.
+                </p>
+                <ul class="family-card__list">
+                  <li>Reception lead: The Rose Garden Hall</li>
+                  <li>Contact: +84 93 111 2468</li>
+                  <li>Requests: Share dietary notes in RSVP</li>
+                </ul>             
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="family-union-wrapper">
+              <div class="family-union-card mx-auto">
+                  <img src="images/family-union.jpg" alt="Our united families" class="family-union-image" />
+                  <h4 class="mb-2" data-i18n="family.union.title">Two Families, One Celebration</h4>
+                  <p class="mb-0" data-i18n="family.union.text">We joyfully unite our families and invite you to celebrate this union with us.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="section section--muted" data-animate>
+      <div class="container">
+        <div class="section__heading">
+          <p class="section__eyebrow" data-i18n="events.eyebrow">Wedding Events</p>
+          <h2 class="section__title" data-i18n="events.title">Save the moments</h2>
+        </div>
+
+        <!-- Save The Date Badge -->
+        <div class="save-the-date-badge">
+          <div class="date-display">
+            <span class="date-day">11</span>
+            <span class="date-month">JAN</span>
+            <span class="date-year">2026</span>
+          </div>
+        </div>
+
+        <div class="events">
+          <article class="event-card event-card--ceremony">
+            <div class="event-card__icon">🎎</div>
+            <h3 class="event-card__title" data-i18n="events.ceremony.title">Lễ Vu Quy (Bride's Ceremony)</h3>
+            <div class="event-card__badges">
+              <span class="event-badge event-badge--outline">Family only</span>
+              <span class="event-badge event-badge--solid">08:00 AM</span>
+            </div>
+            <ul class="event-card__details">
+              <li>
+                <strong>Date</strong>
+                <span>11 January 2026</span>
+              </li>
+              <li>
+                <strong>Venue</strong>
+                <span data-i18n="events.ceremony.location">123 Đường Hoa Hồng, Quận 1, TP. Hồ Chí Minh</span>
+              </li>
+              <li>
+                <strong>Dress</strong>
+                <span>Traditional tones / pastels</span>
+              </li>
+            </ul>
+            <p class="event-card__description" data-i18n="events.ceremony.description">
+              A warm family ritual to honor our parents and ancestors, complete with tea blessings and intimate vows.
+            </p>
+          </article>
+
+          <article class="event-card event-card--reception">
+            <div class="event-card__icon">💍</div>
+            <h3 class="event-card__title" data-i18n="events.reception.title">Wedding Ceremony &amp; Reception</h3>
+            <div class="event-card__badges">
+              <span class="event-badge event-badge--outline">All guests</span>
+              <span class="event-badge event-badge--solid">11:30 AM</span>
+            </div>
+            <ul class="event-card__details">
+              <li>
+                <strong>Date</strong>
+                <span>11 January 2026</span>
+              </li>
+              <li>
+                <strong>Venue</strong>
+                <span data-i18n="events.reception.location">The Rose Garden Hall, 456 Đường Ánh Trăng, TP. Hồ Chí Minh</span>
+              </li>
+              <li>
+                <strong>Program</strong>
+                <span>Welcome drinks · Ceremony · Feast · First dance</span>
+              </li>
+            </ul>
+            <p class="event-card__description" data-i18n="events.reception.description">
+              Join us for vows beneath hanging lights, followed by a chef-curated lunch, champagne toasts, and a lively dance floor.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wedding Day Timeline -->
+    <section id="schedule" class="section section--light" data-animate>
+      <div class="container">
+        <div class="section__heading text-center">
+          <p class="section__eyebrow">Wedding Day</p>
+          <h2 class="section__title">Schedule of heartfelt moments</h2>
+          <p class="section__subtitle">
+            Arrive early, stay late, laugh and dance with us as we savor every chapter of the day.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__item">
+            <div class="timeline__time">07:30</div>
+            <div class="timeline__card">
+              <h3 class="timeline__title">Tea &amp; blessings</h3>
+              <p class="timeline__text">
+                Families gather for a warm cup of tea, gentle blessings, and final touches before the festivities begin.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__time">08:00</div>
+            <div class="timeline__card">
+              <h3 class="timeline__title">Lễ Vu Quy</h3>
+              <p class="timeline__text">
+                Intimate ceremony at the bride's home to honor our parents and ancestors.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__time">10:30</div>
+            <div class="timeline__card">
+              <h3 class="timeline__title">Couple portraits</h3>
+              <p class="timeline__text">
+                We sneak away for photographs while guests mingle, sign the guest book, and enjoy welcome drinks.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__time">11:30</div>
+            <div class="timeline__card">
+              <h3 class="timeline__title">Ceremony &amp; vows</h3>
+              <p class="timeline__text">
+                The ballroom lights up for our official vows at The Rose Garden Hall, followed by a joyful shower of petals.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__time">12:15</div>
+            <div class="timeline__card">
+              <h3 class="timeline__title">Celebration feast</h3>
+              <p class="timeline__text">
+                Chef's curated Vietnamese fusion menu, champagne toasts, and heartfelt speeches.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__time">14:00</div>
+            <div class="timeline__card">
+              <h3 class="timeline__title">First dance &amp; party</h3>
+              <p class="timeline__text">
+                Dance floor opens, photo booth lights up, and we'll party until the final song.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section section--light" data-animate>
+      <div class="container">
+        <div class="section__heading">
+          <p class="section__eyebrow" data-i18n="gallery.eyebrow">Album</p>
+          <h2 class="section__title" data-i18n="gallery.title">A glimpse of our love</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <!-- Bootstrap Carousel -->
+            <div id="albumCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#albumCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#albumCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#albumCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#albumCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              </div>
+
+              <div class="carousel-inner rounded-3 overflow-hidden">
+                <div class="carousel-item active">
+                  <img src="images/gallery-1.jpg" class="d-block w-100" alt="Gallery image 1" data-caption-key="gallery.caption.0" />
+                  <div class="carousel-caption text-center">
+                    <p data-i18n="gallery.caption.0">A sweet moment together</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/gallery-2.jpg" class="d-block w-100" alt="Gallery image 2" data-caption-key="gallery.caption.1" />
+                  <div class="carousel-caption text-center">
+                    <p data-i18n="gallery.caption.1">Walking by the river</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/gallery-3.jpg" class="d-block w-100" alt="Gallery image 3" data-caption-key="gallery.caption.2" />
+                  <div class="carousel-caption text-center">
+                    <p data-i18n="gallery.caption.2">Laughs and lights</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/gallery-4.jpg" class="d-block w-100" alt="Gallery image 4" data-caption-key="gallery.caption.3" />
+                  <div class="carousel-caption text-center">
+                    <p data-i18n="gallery.caption.3">Our favorite place</p>
+                  </div>
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#albumCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#albumCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <!-- Thumbnails that control the carousel -->
+            <div class="mt-3 carousel-thumbs d-flex gap-2 justify-content-center">
+              <button class="thumb-btn" data-bs-target="#albumCarousel" data-bs-slide-to="0" aria-label="Show slide 1">
+                <img src="images/gallery-1-thumb.jpg" alt="Thumbnail 1" />
+              </button>
+              <button class="thumb-btn" data-bs-target="#albumCarousel" data-bs-slide-to="1" aria-label="Show slide 2">
+                <img src="images/gallery-2-thumb.jpg" alt="Thumbnail 2" />
+              </button>
+              <button class="thumb-btn" data-bs-target="#albumCarousel" data-bs-slide-to="2" aria-label="Show slide 3">
+                <img src="images/gallery-3-thumb.jpg" alt="Thumbnail 3" />
+              </button>
+              <button class="thumb-btn" data-bs-target="#albumCarousel" data-bs-slide-to="3" aria-label="Show slide 4">
+                <img src="images/gallery-4-thumb.jpg" alt="Thumbnail 4" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP & Wishes Section -->
+    <section id="rsvp" class="section section--muted" data-animate>
+      <div class="container">
+        <div class="section__heading">
+          <p class="section__eyebrow">Celebrate With Us</p>
+          <h2 class="section__title">Will you join us?</h2>
+        </div>
+
+        <div class="row">
+          <!-- RSVP Form -->
+          <div class="col-lg-6">
+            <h4 class="mb-4" data-i18n="rsvp.title">📋 Confirm Your Attendance</h4>
+            <form class="rsvp-form" id="rsvpForm" novalidate>
+              <div class="rsvp-form__row mb-3">
+                <label for="name" class="form-label" data-i18n="rsvp.name.label">Your full name*</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="" required data-i18n-placeholder="rsvp.name.placeholder" />
+                <span class="rsvp-form__error" data-i18n="rsvp.errors.name">Please enter your name</span>
+              </div>
+
+              <div class="rsvp-form__row mb-3">
+                <label for="phone" class="form-label" data-i18n="rsvp.phone.label">Phone number*</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="" required data-i18n-placeholder="rsvp.phone.placeholder" />
+                <span class="rsvp-form__error" data-i18n="rsvp.errors.phone">Please enter your phone</span>
+              </div>
+
+              <div class="rsvp-form__row mb-3">
+                <label for="guests" class="form-label">Number of guests*</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="guests"
+                  name="guests"
+                  min="1"
+                  max="10"
+                  value="1"
+                  required
+                />
+                <span class="rsvp-form__error" data-i18n="rsvp.errors.guests">Please specify number of guests</span>
+              </div>
+
+              <div class="rsvp-form__row mb-3">
+                <label class="form-label" data-i18n="rsvp.attend.label">Will you attend?*</label>
+                <div class="rsvp-form__options">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="attendance" value="yes" id="attend-yes" required />
+                    <label class="form-check-label" for="attend-yes" data-i18n="rsvp.attend.yes">
+                      ✓ Yes, I'll be there
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="attendance" value="no" id="attend-no" />
+                    <label class="form-check-label" for="attend-no" data-i18n="rsvp.attend.no">
+                      ✗ Sorry, I can't
+                    </label>
+                  </div>
+                </div>
+                <span class="rsvp-form__error" data-i18n="rsvp.errors.attendance">Please select an option</span>
+              </div>
+
+              <div class="rsvp-form__row mb-3">
+                <label for="message" class="form-label" data-i18n="rsvp.message.label">Message to the couple</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="4"
+                  data-i18n-placeholder="rsvp.message.placeholder"
+                  placeholder="Share travel plans, blessings, allergens..."
+                ></textarea>
+                <span class="rsvp-form__hint" data-i18n="rsvp.message.hint">Optional, but we’d love to read it.</span>
+              </div>
+
+              <div class="rsvp-form__row mb-3">
+                <label for="dietary" class="form-label" data-i18n="rsvp.dietary.label">Dietary preferences</label>
+                <select class="form-select" id="dietary" name="dietary">
+                  <option value="">No restrictions</option>
+                  <option value="vegetarian">Vegetarian</option>
+                  <option value="vegan">Vegan</option>
+                  <option value="halal">Halal</option>
+                  <option value="gluten-free">Gluten-free</option>
+                  <option value="other">Other (please specify in wishes)</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100" data-i18n="rsvp.button">Send RSVP</button>
+              <p class="rsvp-form__success" id="rsvpSuccess" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <!-- Guest Wishes Form -->
+          <div class="col-lg-6">
+            <h4 class="mb-4" data-i18n="wishes.title">💌 Send Your Wishes</h4>
+            <form class="wishes-form" id="wishesForm" novalidate>
+              <div class="mb-3">
+                <label for="wish-name" class="form-label" data-i18n="wishes.name.label">Your name*</label>
+                <input type="text" class="form-control" id="wish-name" name="wish-name" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="wish-message" class="form-label" data-i18n="wishes.message.label">Your wishes &amp; congratulations*</label>
+                <textarea 
+                  class="form-control" 
+                  id="wish-message" 
+                  name="wish-message" 
+                  rows="4"
+                  placeholder="Share your heartfelt message..."
+                  required
+                ></textarea>
+              <span class="wishes-form__error" id="wishesError" aria-live="assertive"></span>
+              </div>
+
+              <button type="submit" class="btn btn-outline-primary w-100" data-i18n="wishes.button">Send Wishes</button>
+              <p class="wishes-success" id="wishesSuccess" aria-live="polite"></p>
+            </form>
+
+            <hr class="my-4">
+
+            <h5 class="mb-3">✨ Recent Wishes</h5>
+            <div class="wishes-display" id="wishesDisplay">
+              <div class="wish-item">
+                <p class="wish-name fw-bold">Khánh &amp; Linh</p>
+                <p class="wish-text">"Wishing you a lifetime of love and happiness. Congratulations!"</p>
+              </div>
+              <div class="wish-item">
+                <p class="wish-name fw-bold">Minh Anh</p>
+                <p class="wish-text">"May your marriage be filled with endless laughter and warm hugs."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gift & Info Section -->
+    <section id="gifts" class="section section--light info-section" data-animate>
+      <div class="container">
+        <div class="section__heading">
+          <p class="section__eyebrow">Love &amp; Practicalities</p>
+          <h2 class="section__title">Gifts, dress code &amp; travel tips</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <article class="info-card">
+              <div class="info-card__icon">🎁</div>
+              <h3 class="info-card__title">Your presence is enough</h3>
+              <p class="info-card__text">
+                Sharing this day with you is the greatest gift. If you'd still like to bless us, you can find our bank details below:
+              </p>
+              <div class="info-card__details">
+                <p class="mb-1"><strong>Bank:</strong> Vietcombank</p>
+                <p class="mb-1"><strong>Acc Name:</strong> Nguyen Thien An</p>
+                <p class="mb-0"><strong>Acc No:</strong> 012 345 6789</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="info-card">
+              <div class="info-card__icon">👗</div>
+              <h3 class="info-card__title">Dress in soft pastels</h3>
+              <p class="info-card__text">
+                Think airy fabrics, pastel tones, and comfortable shoes for dancing. Gentlemen, smart-casual or semi-formal works perfectly.
+              </p>
+              <ul class="info-card__list">
+                <li>Pastel pink, champagne, or sage</li>
+                <li>Comfortable heels or loafers</li>
+                <li>Bring a light shawl for air-conditioned halls</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="info-card">
+              <div class="info-card__icon">✈️</div>
+              <h3 class="info-card__title">Travel &amp; stay</h3>
+              <p class="info-card__text">
+                The venue offers valet parking. Guests arriving from afar can choose nearby hotels in District 1 (5-10 minutes away).
+              </p>
+              <ul class="info-card__list">
+                <li>Rose Garden Hall, 456 Đường Ánh Trăng</li>
+                <li>Grab / Taxi drop-off lane available</li>
+                <li>Suggested hotels: The Myst Đồng Khởi, Liberty Riverside</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" class="section section--light" data-animate>
+      <div class="container">
+        <div class="section__heading">
+          <p class="section__eyebrow" data-i18n="map.eyebrow">Location</p>
+          <h2 class="section__title" data-i18n="map.title">How to get there</h2>
+        </div>
+
+        <div class="map-wrapper">
+          <!-- Replace src with your real Google Maps embed -->
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387.43195115176826!2d106.67126612322953!3d10.97578087484927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d12623ae7265%3A0x6e3ef42416093f23!2sGrand%20Square%20Convention%20Center%20and%20Restaurants!5e0!3m2!1sen!2s!4v1763386495820!5m2!1sen!2s" 
+                  width="100%" 
+                  height="400" 
+                  style="border:0; border-radius: 16px;" 
+                  allowfullscreen=""
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <a href="https://maps.app.goo.gl/arc1AmfNuN1q9ARo7?g_st=ipc" target="_blank" class="btn btn-outline-primary" data-i18n="map.directions">📍 Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section--muted contact-section" data-animate>
+      <div class="container">
+        <div class="section__heading">
+          <p class="section__eyebrow">Stay in touch</p>
+          <h2 class="section__title">We would love to hear from you</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <article class="contact-card">
+              <div class="contact-card__icon">📞</div>
+              <h3 class="contact-card__title">Call us</h3>
+              <p class="contact-card__text">Need help with transportation or directions? Call anytime.</p>
+              <a href="tel:+84901345678" class="contact-card__link">+84 90 134 5678</a>
+              <a href="tel:+84701234567" class="contact-card__link">+84 70 123 4567</a>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="contact-card">
+              <div class="contact-card__icon">✉️</div>
+              <h3 class="contact-card__title">Email</h3>
+              <p class="contact-card__text">Send your questions, song requests, or travel plans.</p>
+              <a href="mailto:hello@thienan-truc.com" class="contact-card__link">hello@thienan-truc.com</a>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="contact-card">
+              <div class="contact-card__icon">💌</div>
+              <h3 class="contact-card__title">Social &amp; updates</h3>
+              <p class="contact-card__text">Follow along for behind-the-scenes moments and live updates.</p>
+              <div class="social-links">
+                <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <p class="site-footer__names">Thiên Ân &amp; Huỳnh Trúc</p>
+        <p class="site-footer__thanks" data-i18n="footer.thanks">Thank you for being part of our day.</p>
+      </div>
+      <div class="site-footer__meta">
+        <span>11 • 01 • 2026 — Hồ Chí Minh City</span>
+        <a href="#top" class="site-footer__back" data-i18n="footer.back">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Gallery preview"
+    aria-hidden="true"
+  >
+    <div class="lightbox__inner" tabindex="-1">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Close image">
+        ×
+      </button>
+      <img src="" alt="Gallery large view" class="lightbox__image" />
+      <div class="lightbox__caption" id="lightboxCaption" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- Sticky RSVP CTA (mobile) -->
+  <button id="stickyRsvp" class="sticky-rsvp" aria-label="Open RSVP" onclick="location.href='#rsvp'" data-i18n="sticky.label">RSVP</button>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script defer src="script.js"></script>
+</body>
+</html>
