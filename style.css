@@ -1461,28 +1461,23 @@ section[id] {
   }
 }
 
-/* Family Cards */
+/* Family Section */
 .family-section {
   padding: 60px 0;
 }
 
-.family-cards {
-  margin-top: 30px;
-}
-
-.family-card {
+/* Family Hero Sections (full-width like hero) */
+.family-hero {
   position: relative;
   min-height: 500px;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   color: #fff;
+  overflow: hidden;
 }
 
-.family-card picture {
+.family-hero picture {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -1490,7 +1485,7 @@ section[id] {
   overflow: hidden;
 }
 
-.family-card__image {
+.family-hero__image {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -1499,9 +1494,8 @@ section[id] {
   transform: scale(1.02);
 }
 
-
 /* Dark overlay for text contrast */
-.family-card__overlay {
+.family-hero__overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -1513,42 +1507,458 @@ section[id] {
   z-index: 1;
 }
 
-.family-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-  transition: transform 300ms ease, box-shadow 300ms ease;
-}
-
-.family-card__vietnamese-label {
+/* Tear effect divider between family sections */
+.family-hero__tear {
   position: absolute;
-  top: -16px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(135deg, var(--color-accent), #d4a574);
-  color: #fff;
-  padding: 8px 24px;
-  border-radius: 999px;
-  font-family: "Playfair Display", serif;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  box-shadow: 0 6px 20px rgba(201, 162, 124, 0.35);
-  white-space: nowrap;
-  z-index: 3;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 40px;
+  z-index: 4;
+  pointer-events: none;
 }
 
-.family-card__vietnamese-label--groom {
-  background: linear-gradient(135deg, rgba(47, 76, 142, 0.9), rgba(47, 76, 142, 0.7));
-  box-shadow: 0 6px 20px rgba(47, 76, 142, 0.25);
+.family-hero__tear--bottom {
+  bottom: -20px;
+  background: var(--color-bg-muted);
+  clip-path: polygon(
+    0% 0%,
+    0.5% 2%,
+    1% 0%,
+    1.5% 8%,
+    2% 1%,
+    2.5% 15%,
+    3% 3%,
+    3.5% 20%,
+    4% 5%,
+    4.5% 25%,
+    5% 7%,
+    5.5% 30%,
+    6% 10%,
+    6.5% 35%,
+    7% 12%,
+    7.5% 40%,
+    8% 15%,
+    8.5% 45%,
+    9% 18%,
+    9.5% 50%,
+    10% 20%,
+    10.5% 55%,
+    11% 22%,
+    11.5% 60%,
+    12% 25%,
+    12.5% 65%,
+    13% 28%,
+    13.5% 70%,
+    14% 30%,
+    14.5% 75%,
+    15% 32%,
+    15.5% 78%,
+    16% 35%,
+    16.5% 80%,
+    17% 38%,
+    17.5% 82%,
+    18% 40%,
+    18.5% 85%,
+    19% 42%,
+    19.5% 87%,
+    20% 45%,
+    20.5% 88%,
+    21% 48%,
+    21.5% 90%,
+    22% 50%,
+    22.5% 91%,
+    23% 52%,
+    23.5% 92%,
+    24% 55%,
+    24.5% 93%,
+    25% 58%,
+    25.5% 94%,
+    26% 60%,
+    26.5% 95%,
+    27% 62%,
+    27.5% 96%,
+    28% 65%,
+    28.5% 97%,
+    29% 68%,
+    29.5% 98%,
+    30% 70%,
+    30.5% 99%,
+    31% 72%,
+    31.5% 100%,
+    32% 75%,
+    32.5% 99%,
+    33% 78%,
+    33.5% 98%,
+    34% 80%,
+    34.5% 97%,
+    35% 82%,
+    35.5% 96%,
+    36% 85%,
+    36.5% 95%,
+    37% 87%,
+    37.5% 94%,
+    38% 88%,
+    38.5% 93%,
+    39% 90%,
+    39.5% 92%,
+    40% 91%,
+    40.5% 90%,
+    41% 92%,
+    41.5% 88%,
+    42% 93%,
+    42.5% 85%,
+    43% 94%,
+    43.5% 82%,
+    44% 95%,
+    44.5% 80%,
+    45% 96%,
+    45.5% 78%,
+    46% 97%,
+    46.5% 75%,
+    47% 98%,
+    47.5% 72%,
+    48% 99%,
+    48.5% 70%,
+    49% 100%,
+    49.5% 68%,
+    50% 99%,
+    50.5% 65%,
+    51% 98%,
+    51.5% 62%,
+    52% 97%,
+    52.5% 60%,
+    53% 96%,
+    53.5% 58%,
+    54% 95%,
+    54.5% 55%,
+    55% 94%,
+    55.5% 52%,
+    56% 93%,
+    56.5% 50%,
+    57% 92%,
+    57.5% 48%,
+    58% 91%,
+    58.5% 45%,
+    59% 90%,
+    59.5% 42%,
+    60% 88%,
+    60.5% 40%,
+    61% 85%,
+    61.5% 38%,
+    62% 82%,
+    62.5% 35%,
+    63% 80%,
+    63.5% 32%,
+    64% 78%,
+    64.5% 30%,
+    65% 75%,
+    65.5% 28%,
+    66% 72%,
+    66.5% 25%,
+    67% 70%,
+    67.5% 22%,
+    68% 68%,
+    68.5% 20%,
+    69% 65%,
+    69.5% 18%,
+    70% 62%,
+    70.5% 15%,
+    71% 60%,
+    71.5% 12%,
+    72% 58%,
+    72.5% 10%,
+    73% 55%,
+    73.5% 7%,
+    74% 52%,
+    74.5% 5%,
+    75% 50%,
+    75.5% 3%,
+    76% 48%,
+    76.5% 1%,
+    77% 45%,
+    77.5% 0%,
+    78% 42%,
+    78.5% 2%,
+    79% 40%,
+    79.5% 5%,
+    80% 38%,
+    80.5% 8%,
+    81% 35%,
+    81.5% 12%,
+    82% 32%,
+    82.5% 15%,
+    83% 30%,
+    83.5% 18%,
+    84% 28%,
+    84.5% 20%,
+    85% 25%,
+    85.5% 22%,
+    86% 22%,
+    86.5% 25%,
+    87% 20%,
+    87.5% 28%,
+    88% 18%,
+    88.5% 30%,
+    89% 15%,
+    89.5% 32%,
+    90% 12%,
+    90.5% 35%,
+    91% 8%,
+    91.5% 38%,
+    92% 5%,
+    92.5% 40%,
+    93% 2%,
+    93.5% 42%,
+    94% 0%,
+    94.5% 45%,
+    95% 1%,
+    95.5% 48%,
+    96% 3%,
+    96.5% 50%,
+    97% 5%,
+    97.5% 52%,
+    98% 7%,
+    98.5% 55%,
+    99% 10%,
+    99.5% 58%,
+    100% 12%,
+    100% 100%,
+    0% 100%
+  );
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
 }
 
-.family-card__vietnamese-label--bride {
-  background: linear-gradient(135deg, rgba(233, 160, 190, 0.9), rgba(233, 160, 190, 0.7));
-  box-shadow: 0 6px 20px rgba(233, 160, 190, 0.25);
+.family-hero__tear--top {
+  top: -20px;
+  background: var(--color-bg-muted);
+  clip-path: polygon(
+    0% 100%,
+    0.5% 98%,
+    1% 100%,
+    1.5% 92%,
+    2% 99%,
+    2.5% 85%,
+    3% 97%,
+    3.5% 80%,
+    4% 95%,
+    4.5% 75%,
+    5% 93%,
+    5.5% 70%,
+    6% 90%,
+    6.5% 65%,
+    7% 88%,
+    7.5% 60%,
+    8% 85%,
+    8.5% 55%,
+    9% 82%,
+    9.5% 50%,
+    10% 80%,
+    10.5% 45%,
+    11% 78%,
+    11.5% 40%,
+    12% 75%,
+    12.5% 35%,
+    13% 72%,
+    13.5% 30%,
+    14% 70%,
+    14.5% 25%,
+    15% 68%,
+    15.5% 22%,
+    16% 65%,
+    16.5% 20%,
+    17% 62%,
+    17.5% 18%,
+    18% 60%,
+    18.5% 15%,
+    19% 58%,
+    19.5% 13%,
+    20% 55%,
+    20.5% 12%,
+    21% 52%,
+    21.5% 10%,
+    22% 50%,
+    22.5% 9%,
+    23% 48%,
+    23.5% 8%,
+    24% 45%,
+    24.5% 7%,
+    25% 42%,
+    25.5% 6%,
+    26% 40%,
+    26.5% 5%,
+    27% 38%,
+    27.5% 4%,
+    28% 35%,
+    28.5% 3%,
+    29% 32%,
+    29.5% 2%,
+    30% 30%,
+    30.5% 1%,
+    31% 28%,
+    31.5% 0%,
+    32% 25%,
+    32.5% 1%,
+    33% 22%,
+    33.5% 2%,
+    34% 20%,
+    34.5% 3%,
+    35% 18%,
+    35.5% 4%,
+    36% 15%,
+    36.5% 5%,
+    37% 13%,
+    37.5% 6%,
+    38% 12%,
+    38.5% 7%,
+    39% 10%,
+    39.5% 8%,
+    40% 9%,
+    40.5% 10%,
+    41% 8%,
+    41.5% 12%,
+    42% 7%,
+    42.5% 15%,
+    43% 6%,
+    43.5% 18%,
+    44% 5%,
+    44.5% 20%,
+    45% 4%,
+    45.5% 22%,
+    46% 3%,
+    46.5% 25%,
+    47% 2%,
+    47.5% 28%,
+    48% 1%,
+    48.5% 30%,
+    49% 0%,
+    49.5% 32%,
+    50% 1%,
+    50.5% 35%,
+    51% 2%,
+    51.5% 38%,
+    52% 3%,
+    52.5% 40%,
+    53% 4%,
+    53.5% 42%,
+    54% 5%,
+    54.5% 45%,
+    55% 6%,
+    55.5% 48%,
+    56% 7%,
+    56.5% 50%,
+    57% 8%,
+    57.5% 52%,
+    58% 9%,
+    58.5% 55%,
+    59% 10%,
+    59.5% 58%,
+    60% 12%,
+    60.5% 60%,
+    61% 15%,
+    61.5% 62%,
+    62% 18%,
+    62.5% 65%,
+    63% 20%,
+    63.5% 68%,
+    64% 22%,
+    64.5% 70%,
+    65% 25%,
+    65.5% 72%,
+    66% 28%,
+    66.5% 75%,
+    67% 30%,
+    67.5% 78%,
+    68% 32%,
+    68.5% 80%,
+    69% 35%,
+    69.5% 82%,
+    70% 38%,
+    70.5% 85%,
+    71% 40%,
+    71.5% 88%,
+    72% 42%,
+    72.5% 90%,
+    73% 45%,
+    73.5% 93%,
+    74% 48%,
+    74.5% 95%,
+    75% 50%,
+    75.5% 97%,
+    76% 52%,
+    76.5% 99%,
+    77% 55%,
+    77.5% 100%,
+    78% 58%,
+    78.5% 98%,
+    79% 60%,
+    79.5% 95%,
+    80% 62%,
+    80.5% 92%,
+    81% 65%,
+    81.5% 88%,
+    82% 68%,
+    82.5% 85%,
+    83% 70%,
+    83.5% 82%,
+    84% 72%,
+    84.5% 80%,
+    85% 75%,
+    85.5% 78%,
+    86% 78%,
+    86.5% 75%,
+    87% 80%,
+    87.5% 72%,
+    88% 82%,
+    88.5% 70%,
+    89% 85%,
+    89.5% 68%,
+    90% 88%,
+    90.5% 65%,
+    91% 92%,
+    91.5% 62%,
+    92% 95%,
+    92.5% 60%,
+    93% 98%,
+    93.5% 58%,
+    94% 100%,
+    94.5% 55%,
+    95% 99%,
+    95.5% 52%,
+    96% 97%,
+    96.5% 50%,
+    97% 95%,
+    97.5% 48%,
+    98% 93%,
+    98.5% 45%,
+    99% 90%,
+    99.5% 42%,
+    100% 88%,
+    100% 0%,
+    0% 0%
+  );
+  filter: drop-shadow(0 -4px 8px rgba(0, 0, 0, 0.15));
 }
 
-.family-card__title {
-  font-size: 18px;
+.family-hero__content {
+  position: relative;
+  padding: 80px 20px 60px;
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Align groom's content to the right */
+.family-hero--groom .family-hero__content {
+  text-align: right;
+}
+
+/* Align bride's content to the left */
+.family-hero--bride .family-hero__content {
+  text-align: left;
+}
+
+.family-hero__title {
+  font-size: 24px;
   font-weight: 600;
   margin-top: 12px;
   margin-bottom: 12px;
@@ -1558,37 +1968,27 @@ section[id] {
   z-index: 2;
 }
 
-.family-card__content {
-  font-size: 14px;
-  line-height: 1.8;
-  position: relative;
-  z-index: 2;
-  padding: 24px;
-  opacity: 1;
-}
-
-/* Align groom's content to the right */
-.family-card--groom .family-card__content {
-  text-align: right;
-}
-
-/* Align bride's content to the left */
-.family-card--bride .family-card__content {
-  text-align: left;
+.family-hero__eyebrow {
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 4px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Hide content initially for animation - base state only, no animation */
-.family-section-animated .family-card__content {
+.family-section-animated .family-hero__content {
   opacity: 0;
 }
 
 /* Text content fly-in animations - specific rules with delays */
-.family-section-animated .family-card--groom .family-card__content {
+.family-section-animated .family-hero--groom .family-hero__content {
   animation: slideInContentFromLeft 0.8s ease-out forwards;
   animation-delay: 0.2s;
 }
 
-.family-section-animated .family-card--bride .family-card__content {
+.family-section-animated .family-hero--bride .family-hero__content {
   animation: slideInContentFromRight 0.8s ease-out forwards;
   animation-delay: 0.4s;
 }
@@ -1617,15 +2017,6 @@ section[id] {
 }
 
 
-.family-card__eyebrow {
-  letter-spacing: 0.26em;
-  text-transform: uppercase;
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 4px;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-}
-
 .family-member {
   margin: 6px 0;
   font-size: 14px;
@@ -1636,35 +2027,6 @@ section[id] {
 .family-member strong {
   color: #fff;
   font-weight: 600;
-}
-
-.family-card__text {
-  color: rgba(255, 255, 255, 0.95);
-  margin-bottom: 10px;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-}
-
-.family-card__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 6px;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.95);
-}
-
-.family-card__list li {
-  padding-left: 18px;
-  position: relative;
-}
-
-.family-card__list li::before {
-  content: "•";
-  position: absolute;
-  left: 4px;
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Family union card styling */
@@ -2082,9 +2444,12 @@ section[id] {
     align-items: flex-start;
   }
 
-  .family-card {
+  .family-hero {
     min-height: 400px;
-    padding: 20px;
+  }
+
+  .family-hero__content {
+    padding: 60px 20px 40px;
   }
 }
 
