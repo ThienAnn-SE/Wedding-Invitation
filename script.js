@@ -344,6 +344,38 @@ if ("IntersectionObserver" in window) {
 }
 
 // ------------------------
+// Family section animation (triggers on viewport entry, resets on exit)
+// ------------------------
+const familySection = document.getElementById("family");
+
+if (familySection && "IntersectionObserver" in window) {
+  const familyObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Section entered viewport - reset and trigger animations
+          // Remove class first to reset state, then add it to trigger animation
+          entry.target.classList.remove("family-section-animated");
+          // Use requestAnimationFrame to ensure the reset is applied before animation
+          requestAnimationFrame(() => {
+            entry.target.classList.add("family-section-animated");
+          });
+        } else {
+          // Section left viewport - reset animations
+          entry.target.classList.remove("family-section-animated");
+        }
+      });
+    },
+    { threshold: 0.2 } // Trigger when 20% of section is visible
+  );
+
+  familyObserver.observe(familySection);
+} else if (familySection) {
+  // Fallback - trigger immediately
+  familySection.classList.add("family-section-animated");
+}
+
+// ------------------------
 // Countdown (includes seconds)
 // ------------------------
 const targetDate = new Date("2026-01-11T11:30:00+07:00"); // adjust time zone
