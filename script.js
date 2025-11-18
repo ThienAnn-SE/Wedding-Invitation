@@ -95,9 +95,7 @@ window.__translations = window.__translations || {};
 // degradation if loading locales fails due to CORS/protocol restrictions.
 const FALLBACK_TRANSLATIONS = {
   en: {
-    "nav.story": "Story",
     "nav.events": "Events",
-    "nav.schedule": "Schedule",
     "nav.gallery": "Gallery",
     "nav.rsvp": "Celebration",
     "nav.contact": "Contact",
@@ -109,8 +107,6 @@ const FALLBACK_TRANSLATIONS = {
     "count.minutes": "Minutes",
     "count.seconds": "Seconds",
     "share.label": "Share",
-    "story.eyebrow": "Our Story",
-    "story.title": "How it all began",
     "family.eyebrow": "Meet the Families",
     "family.title": "A union of hearts",
     "events.eyebrow": "Wedding Events",
@@ -129,10 +125,6 @@ const FALLBACK_TRANSLATIONS = {
     "rsvp.dietary.label": "Dietary preferences",
     "rsvp.button": "Send RSVP",
     "rsvp.sending": "Sending…",
-    "wishes.title": "💌 Send Your Wishes",
-    "wishes.name.label": "Your name*",
-    "wishes.message.label": "Your wishes & congratulations*",
-    "wishes.button": "Send Wishes",
     "map.eyebrow": "Location",
     "map.title": "How to get there",
     "map.directions": "📍 Get Directions",
@@ -172,8 +164,6 @@ const FALLBACK_TRANSLATIONS = {
     "rsvp.errors.attendance": "Please select an option",
     "rsvp.success": "✓ Thank you! Your RSVP has been recorded. We can't wait to see you.",
     "rsvp.success.details": "{name}, we reserved {guests} seats for you.",
-    "wishes.success": "✓ Thank you for your kind wishes!",
-    "wishes.errors.required": "Please share your name and message.",
     "music.play": "Music",
     "music.pause": "Pause",
     "sticky.label": "RSVP",
@@ -186,9 +176,7 @@ const FALLBACK_TRANSLATIONS = {
     "gallery.caption.3": "Our favorite place"
   },
   vi: {
-    "nav.story": "Câu chuyện",
     "nav.events": "Sự kiện",
-    "nav.schedule": "Lịch trình",
     "nav.gallery": "Album",
     "nav.rsvp": "Lễ",
     "nav.contact": "Liên hệ",
@@ -200,8 +188,6 @@ const FALLBACK_TRANSLATIONS = {
     "count.minutes": "Phút",
     "count.seconds": "Giây",
     "share.label": "Chia sẻ",
-    "story.eyebrow": "Câu chuyện của chúng tôi",
-    "story.title": "Bắt đầu như thế nào",
     "family.eyebrow": "Gặp gỡ gia đình",
     "family.title": "Hòa hợp trái tim",
     "events.eyebrow": "Sự kiện cưới",
@@ -220,10 +206,6 @@ const FALLBACK_TRANSLATIONS = {
     "rsvp.dietary.label": "Yêu cầu chế độ ăn",
     "rsvp.button": "Gửi RSVP",
     "rsvp.sending": "Đang gửi…",
-    "wishes.title": "💌 Gửi lời chúc",
-    "wishes.name.label": "Tên của bạn*",
-    "wishes.message.label": "Lời chúc & chúc mừng*",
-    "wishes.button": "Gửi lời chúc",
     "map.eyebrow": "Địa điểm",
     "map.title": "Cách đến",
     "map.directions": "📍 Chỉ đường",
@@ -263,8 +245,6 @@ const FALLBACK_TRANSLATIONS = {
     "rsvp.errors.attendance": "Vui lòng chọn một tùy chọn",
     "rsvp.success": "✓ Cảm ơn! RSVP của bạn đã được ghi nhận. Chúng tôi rất mong được gặp bạn.",
     "rsvp.success.details": "{name}, chúng tôi đã giữ {guests} chỗ cho bạn.",
-    "wishes.success": "✓ Cảm ơn lời chúc của bạn!",
-    "wishes.errors.required": "Vui lòng nhập tên và lời chúc.",
     "music.play": "Nhạc",
     "music.pause": "Tạm dừng",
     "sticky.label": "Xác nhận",
@@ -689,53 +669,33 @@ if (petalsContainer && !window.matchMedia("(prefers-reduced-motion: reduce)").ma
   }
 }
 
+
 // ------------------------
-// Guest Wishes Form
+// QR Code Modal
 // ------------------------
-const wishesForm = document.getElementById("wishesForm");
-const wishesDisplay = document.getElementById("wishesDisplay");
-const wishesSuccess = document.getElementById("wishesSuccess");
-const wishesError = document.getElementById("wishesError");
+const qrModal = document.getElementById("qrModal");
+const qrModalOverlay = document.getElementById("qrModalOverlay");
+const qrModalClose = document.getElementById("qrModalClose");
+const qrExpandBtn = document.getElementById("qrExpandBtn");
 
-if (wishesForm) {
-  wishesForm.addEventListener("submit", e => {
-    e.preventDefault();
+if (qrModal && qrExpandBtn) {
+  function openQRModal() {
+    qrModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("is-locked");
+  }
 
-    const wishName = wishesForm.elements["wish-name"].value.trim();
-    const wishMessage = wishesForm.elements["wish-message"].value.trim();
+  function closeQRModal() {
+    qrModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("is-locked");
+  }
 
-    if (!wishName || !wishMessage) {
-      if (wishesError) {
-        wishesError.textContent = t('wishes.errors.required') || "Please share your name and message.";
-      }
-      return;
-    }
+  qrExpandBtn.addEventListener("click", openQRModal);
+  if (qrModalOverlay) qrModalOverlay.addEventListener("click", closeQRModal);
+  if (qrModalClose) qrModalClose.addEventListener("click", closeQRModal);
 
-    if (wishesError) wishesError.textContent = "";
-
-    // Create new wish element
-    const wishItem = document.createElement("div");
-    wishItem.className = "wish-item";
-    const timestamp = new Date().toLocaleString([], { hour: "2-digit", minute: "2-digit", day: "numeric", month: "short" });
-    wishItem.innerHTML = `
-      <p class="wish-name fw-bold">${escapeHtml(wishName)}</p>
-      <p class="wish-text">"${escapeHtml(wishMessage)}"</p>
-      <span class="wish-time">${timestamp}</span>
-    `;
-
-    // Insert at top of wishes
-    if (wishesDisplay) {
-      wishesDisplay.insertBefore(wishItem, wishesDisplay.firstChild);
-    }
-
-    // Show success message
-    wishesForm.reset();
-    if (wishesSuccess) {
-      wishesSuccess.textContent = t('wishes.success') || "✓ Thank you for your kind wishes!";
-      wishesSuccess.style.display = "block";
-      setTimeout(() => {
-        wishesSuccess.style.display = "none";
-      }, 3000);
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && qrModal.getAttribute("aria-hidden") === "false") {
+      closeQRModal();
     }
   });
 }
