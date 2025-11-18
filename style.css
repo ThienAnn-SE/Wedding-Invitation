@@ -1474,7 +1474,7 @@ section[id] {
 /* Family Hero Sections (full-width like hero) */
 .family-hero {
   position: relative;
-  min-height: 500px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -2450,7 +2450,7 @@ section[id] {
   }
 
   .family-hero {
-    min-height: 400px;
+    min-height: 100vh;
   }
 
   .family-hero__content {
