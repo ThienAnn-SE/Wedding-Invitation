@@ -1983,19 +1983,17 @@ section[id] {
 }
 
 /* Hide content initially for animation - base state only, no animation */
-.family-section-animated .family-hero__content {
+.family-hero__content {
   opacity: 0;
 }
 
-/* Text content fly-in animations - specific rules with delays */
-.family-section-animated .family-hero--groom .family-hero__content {
+/* Text content fly-in animations - triggered when each hero enters viewport */
+.family-hero--animated.family-hero--groom .family-hero__content {
   animation: slideInContentFromLeft 0.8s ease-out forwards;
-  animation-delay: 0.2s;
 }
 
-.family-section-animated .family-hero--bride .family-hero__content {
+.family-hero--animated.family-hero--bride .family-hero__content {
   animation: slideInContentFromRight 0.8s ease-out forwards;
-  animation-delay: 0.4s;
 }
 
 /* Content animation keyframes */

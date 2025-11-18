@@ -344,35 +344,33 @@ if ("IntersectionObserver" in window) {
 }
 
 // ------------------------
-// Family section animation (triggers on viewport entry, resets on exit)
+// Family hero animation (each hero animates independently when it enters viewport)
 // ------------------------
-const familySection = document.getElementById("family");
+const familyHeroes = document.querySelectorAll(".family-hero");
 
-if (familySection && "IntersectionObserver" in window) {
-  const familyObserver = new IntersectionObserver(
+if (familyHeroes.length > 0 && "IntersectionObserver" in window) {
+  const familyHeroObserver = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // Section entered viewport - reset and trigger animations
-          // Remove class first to reset state, then add it to trigger animation
-          entry.target.classList.remove("family-section-animated");
-          // Use requestAnimationFrame to ensure the reset is applied before animation
-          requestAnimationFrame(() => {
-            entry.target.classList.add("family-section-animated");
-          });
-        } else {
-          // Section left viewport - reset animations
-          entry.target.classList.remove("family-section-animated");
+          // Hero entered viewport - trigger animation
+          entry.target.classList.add("family-hero--animated");
+          // Once animated, we can stop observing this element
+          familyHeroObserver.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.2 } // Trigger when 20% of section is visible
+    { threshold: 0.2 } // Trigger when 20% of hero section is visible
   );
 
-  familyObserver.observe(familySection);
-} else if (familySection) {
+  familyHeroes.forEach(hero => {
+    familyHeroObserver.observe(hero);
+  });
+} else if (familyHeroes.length > 0) {
   // Fallback - trigger immediately
-  familySection.classList.add("family-section-animated");
+  familyHeroes.forEach(hero => {
+    hero.classList.add("family-hero--animated");
+  });
 }
 
 // ------------------------
