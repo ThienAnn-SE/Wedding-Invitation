@@ -49,9 +49,7 @@
         <button id="langVi" class="lang-btn" aria-pressed="false">VI</button>
       </div>
       <nav class="site-header__nav">
-        <a href="#story" data-i18n="nav.story">Story</a>
         <a href="#events" data-i18n="nav.events">Events</a>
-        <a href="#schedule" data-i18n="nav.schedule">Schedule</a>
         <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
         <a href="#rsvp" data-i18n="nav.rsvp">Celebration</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
@@ -144,6 +142,7 @@
         <div class="row g-4 couple-profiles">
           <div class="col-md-6">
             <article class="profile-card profile-card--groom h-100">
+              <div class="profile-card__vietnamese-label profile-card__vietnamese-label--groom">Chú Rể</div>
               <div class="profile-card__media">
                 <img src="/images/groom-family.JPG" alt="Portrait of Thiên Ân" class="img-fluid profile-card__image" />
               </div>
@@ -164,6 +163,7 @@
           </div>
           <div class="col-md-6">
             <article class="profile-card profile-card--bride h-100">
+              <div class="profile-card__vietnamese-label profile-card__vietnamese-label--bride">Cô Dâu</div>
               <div class="profile-card__media">
                 <img src="/images/bride-family.JPG" alt="Portrait of Huỳnh Trúc" class="img-fluid profile-card__image" />
               </div>
@@ -186,65 +186,6 @@
       </div>
     </section>
 
-    <!-- Story Section -->
-    <section id="story" class="section section--light" data-animate>
-      <div class="container">
-        <div class="section__heading">
-          <p class="section__eyebrow" data-i18n="story.eyebrow">Our Story</p>
-          <h2 class="section__title" data-i18n="story.title">How it all began</h2>
-        </div>
-        <div class="story-grid row g-4 align-items-start">
-          <div class="col-lg-5">
-            <div class="story">
-              <p>
-                It started with a simple message and a shared cup of coffee. From strangers to best
-                friends, from best friends to soulmates – every step brought us closer together.
-              </p>
-              <p>
-                On a quiet evening, surrounded by warm lights and laughter, he asked and she said
-                "yes". Now we can't wait to celebrate this next chapter with the people we love most –
-                including you.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-7">
-            <ol class="story-timeline">
-              <li class="story-timeline__item">
-                <div class="story-timeline__date">May 2018</div>
-                <h3 class="story-timeline__title">The first hello</h3>
-                <p class="story-timeline__text">
-                  Two mutual friends arranged a casual coffee meet-up. We stayed for three hours talking about
-                  travel, design, and secretly, each other.
-                </p>
-              </li>
-              <li class="story-timeline__item">
-                <div class="story-timeline__date">August 2019</div>
-                <h3 class="story-timeline__title">From friends to partners</h3>
-                <p class="story-timeline__text">
-                  A spontaneous road trip to Đà Lạt made us realize we were happiest when singing off-key together.
-                  That was the day we officially began dating.
-                </p>
-              </li>
-              <li class="story-timeline__item">
-                <div class="story-timeline__date">December 2022</div>
-                <h3 class="story-timeline__title">The promise</h3>
-                <p class="story-timeline__text">
-                  Under sparkling lanterns, Thiên Ân asked Trúc to spend forever with him. With joyful tears, she said yes.
-                </p>
-              </li>
-              <li class="story-timeline__item">
-                <div class="story-timeline__date">January 2026</div>
-                <h3 class="story-timeline__title">Happily ever after</h3>
-                <p class="story-timeline__text">
-                  Surrounded by family and friends, we will begin our married life—and we are so grateful that you will be part of it.
-                </p>
-              </li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Family Section -->
     <section id="family" class="section section--muted family-section" data-animate>
       <div class="container">
@@ -256,6 +197,7 @@
         <div class="row family-cards">
           <div class="col-md-6 mb-4 text-md-end">
             <div class="family-card">
+              <div class="family-card__vietnamese-label family-card__vietnamese-label--groom">Nhà Trai</div>
               <h3 class="family-card__title" data-i18n="family.groom.title">Groom's Family</h3>
               <div class="family-card__content">
                 <img src="/images/groom-family.JPG" alt="Groom's family photo" class="img-fluid mb-3 rounded" />
@@ -274,6 +216,7 @@
           </div>
           <div class="col-md-6 mb-4 text-md-start">
             <div class="family-card">
+              <div class="family-card__vietnamese-label family-card__vietnamese-label--bride">Nhà Gái</div>
               <h3 class="family-card__title" data-i18n="family.bride.title">Bride's Family</h3>
               <div class="family-card__content">
                 <img src="/images/bride-family.JPG" alt="Bride's family photo" class="img-fluid mb-3 rounded" />
@@ -378,75 +321,6 @@
       </div>
     </section>
 
-    <!-- Wedding Day Timeline -->
-    <section id="schedule" class="section section--light" data-animate>
-      <div class="container">
-        <div class="section__heading text-center">
-          <p class="section__eyebrow">Wedding Day</p>
-          <h2 class="section__title">Schedule of heartfelt moments</h2>
-          <p class="section__subtitle">
-            Arrive early, stay late, laugh and dance with us as we savor every chapter of the day.
-          </p>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline__item">
-            <div class="timeline__time">07:30</div>
-            <div class="timeline__card">
-              <h3 class="timeline__title">Tea &amp; blessings</h3>
-              <p class="timeline__text">
-                Families gather for a warm cup of tea, gentle blessings, and final touches before the festivities begin.
-              </p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <div class="timeline__time">08:00</div>
-            <div class="timeline__card">
-              <h3 class="timeline__title">Lễ Vu Quy</h3>
-              <p class="timeline__text">
-                Intimate ceremony at the bride's home to honor our parents and ancestors.
-              </p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <div class="timeline__time">10:30</div>
-            <div class="timeline__card">
-              <h3 class="timeline__title">Couple portraits</h3>
-              <p class="timeline__text">
-                We sneak away for photographs while guests mingle, sign the guest book, and enjoy welcome drinks.
-              </p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <div class="timeline__time">11:30</div>
-            <div class="timeline__card">
-              <h3 class="timeline__title">Ceremony &amp; vows</h3>
-              <p class="timeline__text">
-                The ballroom lights up for our official vows at The Rose Garden Hall, followed by a joyful shower of petals.
-              </p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <div class="timeline__time">12:15</div>
-            <div class="timeline__card">
-              <h3 class="timeline__title">Celebration feast</h3>
-              <p class="timeline__text">
-                Chef's curated Vietnamese fusion menu, champagne toasts, and heartfelt speeches.
-              </p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <div class="timeline__time">14:00</div>
-            <div class="timeline__card">
-              <h3 class="timeline__title">First dance &amp; party</h3>
-              <p class="timeline__text">
-                Dance floor opens, photo booth lights up, and we'll party until the final song.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Gallery Section -->
     <section id="gallery" class="section section--light" data-animate>
@@ -534,7 +408,7 @@
 
         <div class="row">
           <!-- RSVP Form -->
-          <div class="col-lg-6">
+          <div class="col-lg-8 mx-auto">
             <h4 class="mb-4" data-i18n="rsvp.title">📋 Confirm Your Attendance</h4>
             <form class="rsvp-form" id="rsvpForm" novalidate>
               <div class="rsvp-form__row mb-3">
@@ -593,7 +467,7 @@
                   data-i18n-placeholder="rsvp.message.placeholder"
                   placeholder="Share travel plans, blessings, allergens..."
                 ></textarea>
-                <span class="rsvp-form__hint" data-i18n="rsvp.message.hint">Optional, but we’d love to read it.</span>
+                <span class="rsvp-form__hint" data-i18n="rsvp.message.hint">Optional, but we'd love to read it.</span>
               </div>
 
               <div class="rsvp-form__row mb-3">
@@ -604,54 +478,13 @@
                   <option value="vegan">Vegan</option>
                   <option value="halal">Halal</option>
                   <option value="gluten-free">Gluten-free</option>
-                  <option value="other">Other (please specify in wishes)</option>
+                  <option value="other">Other (please specify in message)</option>
                 </select>
               </div>
 
               <button type="submit" class="btn btn-primary w-100" data-i18n="rsvp.button">Send RSVP</button>
               <p class="rsvp-form__success" id="rsvpSuccess" aria-live="polite"></p>
             </form>
-          </div>
-
-          <!-- Guest Wishes Form -->
-          <div class="col-lg-6">
-            <h4 class="mb-4" data-i18n="wishes.title">💌 Send Your Wishes</h4>
-            <form class="wishes-form" id="wishesForm" novalidate>
-              <div class="mb-3">
-                <label for="wish-name" class="form-label" data-i18n="wishes.name.label">Your name*</label>
-                <input type="text" class="form-control" id="wish-name" name="wish-name" required />
-              </div>
-
-              <div class="mb-3">
-                <label for="wish-message" class="form-label" data-i18n="wishes.message.label">Your wishes &amp; congratulations*</label>
-                <textarea 
-                  class="form-control" 
-                  id="wish-message" 
-                  name="wish-message" 
-                  rows="4"
-                  placeholder="Share your heartfelt message..."
-                  required
-                ></textarea>
-              <span class="wishes-form__error" id="wishesError" aria-live="assertive"></span>
-              </div>
-
-              <button type="submit" class="btn btn-outline-primary w-100" data-i18n="wishes.button">Send Wishes</button>
-              <p class="wishes-success" id="wishesSuccess" aria-live="polite"></p>
-            </form>
-
-            <hr class="my-4">
-
-            <h5 class="mb-3">✨ Recent Wishes</h5>
-            <div class="wishes-display" id="wishesDisplay">
-              <div class="wish-item">
-                <p class="wish-name fw-bold">Khánh &amp; Linh</p>
-                <p class="wish-text">"Wishing you a lifetime of love and happiness. Congratulations!"</p>
-              </div>
-              <div class="wish-item">
-                <p class="wish-name fw-bold">Minh Anh</p>
-                <p class="wish-text">"May your marriage be filled with endless laughter and warm hugs."</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -665,21 +498,36 @@
           <h2 class="section__title">Gifts, dress code &amp; travel tips</h2>
         </div>
         <div class="row g-4">
-          <div class="col-lg-4">
-            <article class="info-card">
-              <div class="info-card__icon">🎁</div>
-              <h3 class="info-card__title">Your presence is enough</h3>
-              <p class="info-card__text">
-                Sharing this day with you is the greatest gift. If you'd still like to bless us, you can find our bank details below:
-              </p>
-              <div class="info-card__details">
-                <p class="mb-1"><strong>Bank:</strong> Vietcombank</p>
-                <p class="mb-1"><strong>Acc Name:</strong> Nguyen Thien An</p>
-                <p class="mb-0"><strong>Acc No:</strong> 012 345 6789</p>
+          <div class="col-lg-6 mx-auto">
+            <article class="gift-qr-card">
+              <div class="gift-qr-card__header">
+                <div class="gift-qr-card__icon">🎁</div>
+                <h3 class="gift-qr-card__title">Gửi quà mừng cưới</h3>
+                <p class="gift-qr-card__subtitle">Your presence is enough</p>
+              </div>
+              <div class="gift-qr-card__content">
+                <p class="gift-qr-card__text">
+                  Sharing this day with you is the greatest gift. If you'd still like to bless us, scan the QR code below:
+                </p>
+                <div class="gift-qr-card__qr-wrapper">
+                  <div class="gift-qr-card__qr-container" id="qrCodeContainer">
+                    <!-- QR Code will be displayed here -->
+                    <img src="/images/banking-qr-code.png" alt="Banking QR Code" class="gift-qr-card__qr-image" />
+                  </div>
+                  <button class="gift-qr-card__expand-btn" id="qrExpandBtn" aria-label="Expand QR code">
+                    <span class="gift-qr-card__expand-icon">🔍</span>
+                    <span>Tap to enlarge</span>
+                  </button>
+                </div>
+                <div class="gift-qr-card__details">
+                  <p class="mb-1"><strong>Bank:</strong> Vietcombank</p>
+                  <p class="mb-1"><strong>Acc Name:</strong> Nguyen Thien An</p>
+                  <p class="mb-0"><strong>Acc No:</strong> 012 345 6789</p>
+                </div>
               </div>
             </article>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-3">
             <article class="info-card">
               <div class="info-card__icon">👗</div>
               <h3 class="info-card__title">Dress in soft pastels</h3>
@@ -693,7 +541,7 @@
               </ul>
             </article>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-3">
             <article class="info-card">
               <div class="info-card__icon">✈️</div>
               <h3 class="info-card__title">Travel &amp; stay</h3>
@@ -710,6 +558,20 @@
         </div>
       </div>
     </section>
+
+    <!-- QR Code Modal -->
+    <div class="qr-modal" id="qrModal" role="dialog" aria-modal="true" aria-label="QR Code" aria-hidden="true">
+      <div class="qr-modal__overlay" id="qrModalOverlay"></div>
+      <div class="qr-modal__content">
+        <button class="qr-modal__close" id="qrModalClose" aria-label="Close QR code">×</button>
+        <img src="/images/banking-qr-code.png" alt="Banking QR Code - Large View" class="qr-modal__image" />
+        <div class="qr-modal__details">
+          <p class="mb-1"><strong>Bank:</strong> Vietcombank</p>
+          <p class="mb-1"><strong>Acc Name:</strong> Nguyen Thien An</p>
+          <p class="mb-0"><strong>Acc No:</strong> 012 345 6789</p>
+        </div>
+      </div>
+    </div>
 
     <!-- Map Section -->
     <section id="map" class="section section--light" data-animate>

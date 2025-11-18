@@ -17,6 +17,21 @@ body {
   color: #2d2a32;
   background: #fdfbfb;
   -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("/images/couple-hero.JPG");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  opacity: 0.08;
+  z-index: -1;
+  pointer-events: none;
 }
 
 body.is-locked {
@@ -402,83 +417,6 @@ section[id] {
   transform: translateY(0);
 }
 
-/* Story */
-.story {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #4a404a;
-  max-width: 640px;
-  margin: 0 auto;
-}
-
-.story p + p {
-  margin-top: 12px;
-}
-
-.story-grid {
-  margin-top: 10px;
-}
-
-.story-timeline {
-  list-style: none;
-  margin: 0;
-  padding: 0 0 0 24px;
-  position: relative;
-}
-
-.story-timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 7px;
-  width: 2px;
-  background: rgba(201, 162, 124, 0.35);
-}
-
-.story-timeline__item {
-  position: relative;
-  padding-left: 26px;
-  margin-bottom: 28px;
-}
-
-.story-timeline__item:last-child {
-  margin-bottom: 0;
-}
-
-.story-timeline__item::before {
-  content: "";
-  position: absolute;
-  left: -5px;
-  top: 0;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  background: var(--color-accent);
-  box-shadow: 0 0 0 4px rgba(201, 162, 124, 0.15);
-}
-
-.story-timeline__date {
-  font-size: 12px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #a08c82;
-  margin-bottom: 4px;
-}
-
-.story-timeline__title {
-  font-size: 17px;
-  margin: 0 0 6px;
-  color: #2d2a32;
-}
-
-.story-timeline__text {
-  margin: 0;
-  font-size: 14px;
-  color: #5c5158;
-}
-
 .couple-section {
   position: relative;
 }
@@ -495,6 +433,38 @@ section[id] {
   display: flex;
   flex-direction: column;
   height: 100%;
+  position: relative;
+}
+
+.profile-card__vietnamese-label {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  color: #2d2a32;
+  padding: 6px 20px;
+  border-radius: 999px;
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+  z-index: 2;
+  backdrop-filter: blur(8px);
+}
+
+.profile-card__vietnamese-label--groom {
+  background: rgba(47, 76, 142, 0.95);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(47, 76, 142, 0.3);
+}
+
+.profile-card__vietnamese-label--bride {
+  background: rgba(233, 160, 190, 0.95);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(233, 160, 190, 0.3);
 }
 
 .profile-card__media {
@@ -575,72 +545,212 @@ section[id] {
   border-top: 4px solid rgba(233, 160, 190, 0.35);
 }
 
-.timeline {
-  display: grid;
-  gap: 18px;
-  max-width: 900px;
-  margin: 0 auto;
+.info-section .row {
+  margin-top: 10px;
 }
 
-.timeline__item {
-  display: grid;
-  grid-template-columns: 110px 1fr;
-  gap: 12px;
-  align-items: stretch;
-}
-
-.timeline__time {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--color-accent);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-}
-
-.timeline__card {
+/* Gift QR Code Card */
+.gift-qr-card {
   background: #fff;
-  border-radius: var(--radius-md);
-  padding: 20px 22px;
+  border-radius: var(--radius-lg);
+  padding: 28px;
   box-shadow: var(--shadow-soft);
-  border-left: 4px solid rgba(201, 162, 124, 0.35);
+  text-align: center;
+  border-top: 3px solid var(--color-accent);
 }
 
-.timeline__title {
-  margin: 0 0 6px;
-  font-size: 18px;
+.gift-qr-card__header {
+  margin-bottom: 20px;
+}
+
+.gift-qr-card__icon {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.gift-qr-card__title {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: #2d2a32;
+}
+
+.gift-qr-card__subtitle {
+  font-size: 13px;
+  color: #8b7d84;
+  margin: 0;
+  font-style: italic;
+}
+
+.gift-qr-card__text {
+  font-size: 14px;
+  color: #5c5158;
+  margin: 0 0 20px;
+  line-height: 1.7;
+}
+
+.gift-qr-card__qr-wrapper {
+  margin: 20px 0;
+}
+
+.gift-qr-card__qr-container {
+  display: inline-block;
+  padding: 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
+  transition: transform 200ms ease;
+}
+
+.gift-qr-card__qr-container:hover {
+  transform: scale(1.02);
+}
+
+.gift-qr-card__qr-image {
+  width: 200px;
+  height: 200px;
+  display: block;
+  border-radius: 8px;
+}
+
+.gift-qr-card__expand-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  color: var(--color-accent);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.gift-qr-card__expand-btn:hover {
+  background: var(--color-accent);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.gift-qr-card__expand-icon {
+  font-size: 14px;
+}
+
+.gift-qr-card__details {
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(201, 162, 124, 0.08);
+  font-size: 13px;
+  color: #4a404a;
+  text-align: left;
+}
+
+.gift-qr-card__details p {
+  margin: 0;
+}
+
+.gift-qr-card__details strong {
   font-weight: 600;
   color: #2d2a32;
 }
 
-.timeline__text {
+/* QR Code Modal */
+.qr-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.qr-modal[aria-hidden="false"] {
+  display: flex;
+}
+
+.qr-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 12, 26, 0.86);
+  backdrop-filter: blur(4px);
+}
+
+.qr-modal__content {
+  position: relative;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  animation: modalSlideUp 300ms ease-out;
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.qr-modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.08);
+  color: #2d2a32;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 200ms ease;
+}
+
+.qr-modal__close:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.qr-modal__image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.qr-modal__details {
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(201, 162, 124, 0.08);
+  font-size: 13px;
+  color: #4a404a;
+  text-align: left;
+}
+
+.qr-modal__details p {
   margin: 0;
-  font-size: 14px;
-  color: #5f565d;
-  line-height: 1.6;
 }
 
-.section__subtitle {
-  max-width: 680px;
-  margin: 12px auto 0;
-  font-size: 15px;
-  color: #5c5158;
-  line-height: 1.7;
-}
-
-@media (max-width: 768px) {
-  .timeline__item {
-    grid-template-columns: 1fr;
-  }
-
-  .timeline__time {
-    justify-content: flex-start;
-  }
-}
-
-.info-section .row {
-  margin-top: 10px;
+.qr-modal__details strong {
+  font-weight: 600;
+  color: #2d2a32;
 }
 
 .info-card {
@@ -1368,6 +1478,7 @@ section[id] {
   text-align: center;
   transition: all 300ms ease;
   border-top: 3px solid var(--color-accent);
+  position: relative;
 }
 
 .family-card:hover {
@@ -1375,9 +1486,38 @@ section[id] {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
 }
 
+.family-card__vietnamese-label {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--color-accent), #d4a574);
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: 999px;
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  box-shadow: 0 6px 20px rgba(201, 162, 124, 0.35);
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.family-card__vietnamese-label--groom {
+  background: linear-gradient(135deg, rgba(47, 76, 142, 0.9), rgba(47, 76, 142, 0.7));
+  box-shadow: 0 6px 20px rgba(47, 76, 142, 0.25);
+}
+
+.family-card__vietnamese-label--bride {
+  background: linear-gradient(135deg, rgba(233, 160, 190, 0.9), rgba(233, 160, 190, 0.7));
+  box-shadow: 0 6px 20px rgba(233, 160, 190, 0.25);
+}
+
 .family-card__title {
   font-size: 18px;
   font-weight: 600;
+  margin-top: 12px;
   margin-bottom: 12px;
   color: #2d2a32;
 }
@@ -1831,18 +1971,6 @@ section[id] {
 
   .profile-card__image {
     height: 220px;
-  }
-
-  .story-timeline {
-    padding-left: 10px;
-  }
-
-  .story-timeline__item {
-    padding-left: 20px;
-  }
-
-  .timeline__card {
-    padding: 16px 18px;
   }
 
   .site-footer__inner {
