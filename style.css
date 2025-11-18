@@ -67,6 +67,7 @@ body.is-locked {
   inset-inline: 0;
   top: 0;
   z-index: 20;
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   background: linear-gradient(
     to bottom,
@@ -263,6 +264,7 @@ body.is-locked {
   letter-spacing: 0.15em;
   color: #fff;
   background: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
   transition: background var(--transition-fast), transform var(--transition-fast);
 }
@@ -303,6 +305,7 @@ body.is-locked {
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.28);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -452,6 +455,7 @@ section[id] {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   white-space: nowrap;
   z-index: 2;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -677,6 +681,7 @@ section[id] {
   position: absolute;
   inset: 0;
   background: rgba(15, 12, 26, 0.86);
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
 
