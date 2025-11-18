@@ -168,8 +168,7 @@ const FALLBACK_TRANSLATIONS = {
     "music.pause": "Pause",
     "sticky.label": "RSVP",
     "footer.thanks": "Thank you for being part of our day.",
-    "footer.back": "Back to top ↑"
-  ,
+    "footer.back": "Back to top ↑",
     "gallery.caption.0": "A sweet moment together",
     "gallery.caption.1": "Walking by the river",
     "gallery.caption.2": "Laughs and lights",
@@ -249,8 +248,7 @@ const FALLBACK_TRANSLATIONS = {
     "music.pause": "Tạm dừng",
     "sticky.label": "Xác nhận",
     "footer.thanks": "Cảm ơn bạn đã là một phần của ngày hôm nay.",
-    "footer.back": "Lên đầu trang ↑"
-  ,
+    "footer.back": "Lên đầu trang ↑",
     "gallery.caption.0": "Khoảnh khắc ngọt ngào bên nhau",
     "gallery.caption.1": "Dạo bước bên sông",
     "gallery.caption.2": "Tiếng cười và ánh đèn",
