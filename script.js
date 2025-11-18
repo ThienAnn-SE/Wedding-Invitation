@@ -355,8 +355,9 @@ if (familyHeroes.length > 0 && "IntersectionObserver" in window) {
         if (entry.isIntersecting) {
           // Hero entered viewport - trigger animation
           entry.target.classList.add("family-hero--animated");
-          // Once animated, we can stop observing this element
-          familyHeroObserver.unobserve(entry.target);
+        } else {
+          // Hero exited viewport - reset animation so it can replay when entering again
+          entry.target.classList.remove("family-hero--animated");
         }
       });
     },
