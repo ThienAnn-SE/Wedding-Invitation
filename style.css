@@ -2491,4 +2491,8 @@ section[id] {
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .family-hero {
+    min-height: 100vh;
+  }
 }
