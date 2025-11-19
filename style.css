@@ -2493,6 +2493,6 @@ section[id] {
   }
 
   .family-hero {
-    min-height: 100vh;
+    min-height: max(100vh, 700px);
   }
 }
