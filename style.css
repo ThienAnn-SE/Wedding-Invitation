@@ -2493,6 +2493,13 @@ section[id] {
   }
 
   .family-hero {
-    min-height: max(100vh, 700px);
+    min-height: max(100vh, 1000px);
+  }
+  
+  /* For very wide screens, ensure adequate height */
+  @media (min-width: 1400px) {
+    .family-hero {
+      min-height: max(100vh, 1100px);
+    }
   }
 }
