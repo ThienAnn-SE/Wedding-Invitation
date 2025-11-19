@@ -2496,6 +2496,12 @@ section[id] {
     min-height: max(100vh, 1000px);
   }
   
+  /* Display full image on desktop without cropping */
+  .family-hero__image {
+    object-fit: contain;
+    object-position: center;
+  }
+  
   /* For very wide screens, ensure adequate height */
   @media (min-width: 1400px) {
     .family-hero {
